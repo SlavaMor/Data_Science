@@ -1,0 +1,17 @@
+# ЗАГРУЗКА И ОБЪЕДИНЕНИЕ НЕСКОЛЬКИХ CSV ФАЙЛОВ В 1
+
+extension = 'csv'
+all_filenames = [i for i in glob.glob('*.{}'.format(extension))]
+
+all_filenames
+
+df = pd.read_csv(all_filenames[0], sep=';',header=0)
+df['Name'] = all_filenames[0]
+
+for f in all_filenames:
+    df_x = pd.read_csv(f, sep=';', header=0)
+    df_x['Name'] = all_filenames[all_filenames.index(f)]
+    df = pd.concat([df, df_x], ignore_index=True)
+    
+jj    
+    
