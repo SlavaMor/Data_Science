@@ -1,0 +1,10 @@
+import pandas as pd
+import numpy as np 
+
+
+### Useful functions in pandas ###
+
+# Get duplicates from df
+df[df.duplicated(keep= False)]
+
+#
