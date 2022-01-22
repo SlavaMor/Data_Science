@@ -1,10 +1,13 @@
 # Установка дополнительных модулей/библиотек
-!pip install graphviz
+!pip install package
+!pip install package.module
 
-# Посмотреть версию библиотеки (напр. pandas (pd))
-print(pd.__version__)
+# Посмотреть версию библиотеки (напр. pandas)
+print(pandas.__version__)
 
-
+# Чтение всех файлов в директории и их объединение
+path_dir = './path/to/directory'
+df = pd.concat(map(pd.read_csv, glob.glob(f'{path_dir}\\*.csv')))
 
 
 PANDAS:
