@@ -10,12 +10,27 @@ path_dir = './path/to/directory'
 df = pd.concat(map(pd.read_csv, glob.glob(f'{path_dir}\\*.csv')))
 
 
-PANDAS:
+### DATA SCIENCE ###
 
 df.isnull() # Проверяет df на наличие пропущенных значений (возвращает логический вектор)
 df.isnull().sum() # Кол-во NaN
 
 X = pd.get_dummies(X) # создаёт номинативные переменные на основе str в df (при этом разделяет столбцы)
+
+
+
+
+### ПРОЧЕЕ ###
+
+# Обновить модуль
+import importlib
+importlib.reload(module_name)
+
+
+
+
+
+
 
 
 
