@@ -10,6 +10,13 @@ path_dir = './path/to/directory'
 df = pd.concat(map(pd.read_csv, glob.glob(f'{path_dir}\\*.csv')))
 
 
+
+### DICT ###
+
+# Sorting a dictionary by values 
+sorted(dict.items(), key=lambda x: x[1])
+
+
 ### DATA SCIENCE ###
 
 df.isnull() # Проверяет df на наличие пропущенных значений (возвращает логический вектор)
